@@ -25,7 +25,7 @@ def primeDivisors(n):
         if n%i == 0:
             n = n/i
             addTo(primes, i)
-            i = 2
+            i = min
 
         else:
             i += 1
