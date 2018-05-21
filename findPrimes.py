@@ -21,11 +21,13 @@ def primeDivisors(n):
     min = 2
 
     i = min
-    while(i < n ** (1/2) and n > 1):
+    max = n ** (1/2)
+    while(i < max and n > 1):
         if n%i == 0:
             n = n/i
             addTo(primes, i)
             i = min
+            max = n ** (1/2)
 
         else:
             i += 1
